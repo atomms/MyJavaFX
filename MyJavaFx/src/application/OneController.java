@@ -20,17 +20,6 @@ public class OneController {
 	@FXML
 	private ImageView imageRaw;
 
-    // Reference to the main application
-    private Main mainApp;
-
-    /**
-     * Is called by the main application to give a reference back to itself.
-     * 
-     * @param mainApp
-     */
-    public void setMainApp(Main mainApp) {
-        this.mainApp = mainApp;
-    }
 
 	/**
      * Opens an stage to send the profile, to be done...
