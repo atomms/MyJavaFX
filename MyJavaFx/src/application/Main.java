@@ -3,11 +3,13 @@ package application;
 import java.io.IOException;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
+import javafx.scene.effect.GaussianBlur;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 
 
 public class Main extends Application {
@@ -15,6 +17,7 @@ public class Main extends Application {
 
 	private AnchorPane rootLayout;
 	public Stage primaryStage;
+	
 	
 	@Override
 	public void start(Stage primaryStage) {
@@ -33,38 +36,61 @@ public class Main extends Application {
 			primaryStage.show();
 			
 			initRootLayout();
+			  
+
 			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
+    class WingClipper {
+        @FXML
+        private ImageView superheader;
+        
+	@FXML
+  public void initialize() {
+      superheader = new ImageView();
+      superheader.setEffect(new GaussianBlur(100));	
+		
+	}
+	
+    }
+	
 	public void initRootLayout() {
 		try {
 			// Load root layout from fxml file.
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("view/Layouts.fxml"));
-			rootLayout = (AnchorPane) loader.load();
+			// // Give the controller access to the main app.
+			loader.setController(new WingClipper());
+			rootLayout = (AnchorPane) loader.load();		
+
 
 			// Show the scene containing the root layout.
 			Scene scene = new Scene(rootLayout, 600, 400);
 			scene.getStylesheets().add(
 					getClass().getResource("application.css").toExternalForm());
 			scene.getStylesheets().add("http://fonts.googleapis.com/css?family=Shadows+Into+Light");
-
+		      
 			primaryStage.setScene(scene);
 
-			// // Give the controller access to the main app.
+
+
+
+			
 			// OneController controller = loader.getController();
 			// controller.setMainApp(this);
 
 			// imageRaw.setEffect(new GaussianBlur());
+			
 			primaryStage.show();
 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
+	
 	
 	public static void main(String[] args) {
 		launch(args);
