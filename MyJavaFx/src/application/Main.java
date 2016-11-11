@@ -19,8 +19,7 @@ public class Main extends Application {
 
 	private AnchorPane rootLayout;
 	public Stage primaryStage;
-	@FXML
-	private ImageView superheader;
+
 	
 	@Override
 	public void start(Stage primaryStage) {
