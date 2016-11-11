@@ -33,12 +33,12 @@
                         <Image url="@../view/images/CChannel.png" />
                      </image>
                      <effect>
-                        <ColorAdjust hue="-1.0" />
+                        <ColorAdjust />
                      </effect>
                   </ImageView>
                   <VBox alignment="CENTER" GridPane.columnIndex="1">
                      <children>
-                        <Label alignment="CENTER" style="-fx-font-weight: bold;" text="School of AID">
+                        <Label alignment="CENTER" style="-fx-font-size: 40;" styleClass="mytitle" stylesheets="@../application.css" text="School of AID">
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin>
