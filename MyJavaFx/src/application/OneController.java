@@ -34,7 +34,7 @@ public class OneController {
             Stage sendStage = new Stage();
             sendStage.setTitle("Superheader");
             Scene scene = new Scene(page);
-            sendStage.setScene(scene);
+             sendStage.setScene(scene);
 
             
             sendStage.show();
