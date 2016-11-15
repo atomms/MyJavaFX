@@ -23,7 +23,10 @@ import javafx.scene.text.Font;
 
 public class Main extends Application {
 	
-	private AnchorPane rootLayout;
+	private AnchorPane rootLayout;	
+	/**
+	 * my Stage is public
+	 */
 	public Stage primaryStage;
 
 	
