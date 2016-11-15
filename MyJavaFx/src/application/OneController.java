@@ -5,6 +5,7 @@ import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.effect.GaussianBlur;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -16,20 +17,17 @@ import javafx.stage.Stage;
  */
 public class OneController {
 	
-	//not using yet
+    class WingClipper {
+        @FXML
+        private ImageView superheader;
+        
 	@FXML
-	private ImageView imageRaw;
-
-    // Reference to the main application
-    private Main mainApp;
-
-    /**
-     * Is called by the main application to give a reference back to itself.
-     * 
-     * @param mainApp
-     */
-    public void setMainApp(Main mainApp) {
-        this.mainApp = mainApp;
+  public void initialize() {
+      superheader = new ImageView();
+      superheader.setEffect(new GaussianBlur(100));	
+		
+	}
+	
     }
 
 	/**

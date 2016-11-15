@@ -11,14 +11,22 @@ import javafx.scene.effect.GaussianBlur;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
+/**
+ * 
+ * @author ernesto
+ * @version 1.0
+ * @see OneController
+ */
 
 public class Main extends Application {
 	
 
-	private AnchorPane rootLayout;
+		private AnchorPane rootLayout;
 	public Stage primaryStage;
 	
-	
+	/**
+	 * init the stage
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -44,18 +52,9 @@ public class Main extends Application {
 		}
 	}
 	
-    class WingClipper {
-        @FXML
-        private ImageView superheader;
-        
-	@FXML
-  public void initialize() {
-      superheader = new ImageView();
-      superheader.setEffect(new GaussianBlur(100));	
-		
-	}
-	
-    }
+	/**
+	 * loads the layout 
+	 */
 	
 	public void initRootLayout() {
 		try {
@@ -63,7 +62,7 @@ public class Main extends Application {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(Main.class.getResource("view/Layouts.fxml"));
 			// // Give the controller access to the main app.
-			loader.setController(new WingClipper());
+//			loader.setController(new WingClipper());
 			rootLayout = (AnchorPane) loader.load();		
 
 
@@ -74,11 +73,7 @@ public class Main extends Application {
 			scene.getStylesheets().add("http://fonts.googleapis.com/css?family=Shadows+Into+Light");
 		      
 			primaryStage.setScene(scene);
-
-
-
-
-			
+		
 			// OneController controller = loader.getController();
 			// controller.setMainApp(this);
 
