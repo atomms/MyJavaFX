@@ -22,7 +22,7 @@ public class OneController {
 
 
 	/**
-     * Opens an stage to send the profile, to be done...
+     * Opens an stage to send the profile
      */
     
     public void showSendProfile() {

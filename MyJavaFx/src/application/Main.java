@@ -13,14 +13,23 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 
+/**
+ * 
+ * A JavaFX interface with a nice look and simple functionality 
+ * @author ernesto
+ * @version 1.0
+ * @see OneController
+ */
 
 public class Main extends Application {
 	
-
 	private AnchorPane rootLayout;
 	public Stage primaryStage;
 
 	
+	/**
+	 * sets the stage
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -40,7 +49,9 @@ public class Main extends Application {
 	}
 	
 	
-	
+	/**
+	 * loads the layout
+	 */
 	public void initRootLayout() {
 		try {
 			// Load root layout from fxml file.
@@ -57,8 +68,6 @@ public class Main extends Application {
 			scene.getStylesheets().add("http://fonts.googleapis.com/css?family=Shadows+Into+Light");
             Font.loadFont(getClass().getResourceAsStream("../resources/fonts/HipsterFactory.ttf"), 20);
             
-
-
 			primaryStage.setScene(scene);
 			
 
@@ -66,7 +75,10 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
-	
+
+	/**
+	 * @param args launching 
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}
