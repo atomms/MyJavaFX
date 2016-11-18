@@ -3,19 +3,15 @@ package application;
 import java.io.IOException;
 
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.effect.GaussianBlur;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 
 /**
  * 
- * A JavaFX interface with a nice look and simple functionality 
+ * A <b>JavaFX</b> interface with a nice look and simple functionality 
  * @author ernesto
  * @version 1.0
  * @see OneController
@@ -66,10 +62,10 @@ public class Main extends Application {
 			Scene scene = new Scene(rootLayout, 640, 480);
 			scene.getStylesheets().add(
 					getClass().getResource("application.css").toExternalForm());
-			
-//			adding fonts
+	
+			//			adding fonts
 			scene.getStylesheets().add("http://fonts.googleapis.com/css?family=Shadows+Into+Light");
-            Font.loadFont(getClass().getResourceAsStream("../resources/fonts/HipsterFactory.ttf"), 20);
+            Font.loadFont(getClass().getResourceAsStream("../resources/fonts/HipsterishFontNormal.ttf"), 20);
             
 			primaryStage.setScene(scene);
 			
