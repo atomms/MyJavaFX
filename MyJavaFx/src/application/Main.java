@@ -2,10 +2,18 @@ package application;
 	
 import java.io.IOException;
 
+
+
+
+
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import javafx.scene.Cursor;
+import javafx.scene.ImageCursor;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 
@@ -37,7 +45,7 @@ public class Main extends Application {
 			this.primaryStage.setTitle("AID School");
 			this.primaryStage.setX(200);
 			this.primaryStage.setY(200);
-
+            Thread.sleep(0);
 			primaryStage.show();
 			
 			initRootLayout();
@@ -60,6 +68,9 @@ public class Main extends Application {
 
 			// Show the scene containing the root layout.
 			Scene scene = new Scene(rootLayout, 640, 480);
+			Image image = new Image("application/batman.png");  //pass in the image path
+			scene.setCursor(new ImageCursor(image));
+//			scene.setCursor(Cursor.CROSSHAIR); //Change cursor to crosshair
 			scene.getStylesheets().add(
 					getClass().getResource("application.css").toExternalForm());
 	
