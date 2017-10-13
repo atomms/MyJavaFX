@@ -19,6 +19,7 @@ public class OneController {
 	//not using yet
 	@FXML
 	private ImageView imageRaw;
+//	private Stage sendStage;
 
 
 	/**
@@ -50,6 +51,7 @@ public class OneController {
     @FXML
     private void handleSend() {
     	showSendProfile();
+//        sendStage.close();
     }
 
     /**
@@ -57,6 +59,7 @@ public class OneController {
      */
     @FXML
     private void handleClose() {
+
    	        System.exit(0);
     }
     }

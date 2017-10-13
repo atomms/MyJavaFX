@@ -81,7 +81,7 @@
                      <children>
                         <HBox alignment="BOTTOM_RIGHT" prefHeight="138.0" prefWidth="213.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                            <children>
-                              <Button mnemonicParsing="false" onMouseClicked="#handleSend" styleClass="mybutton" stylesheets="@../application.css" text="DIE">
+                              <Button mnemonicParsing="false" onMouseClicked="#handleClose" styleClass="mybutton" stylesheets="@../application.css" text="DIE">
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
                                  </cursor>
@@ -91,7 +91,7 @@
                                  <tooltip>
                                     <Tooltip text="click me!" />
                                  </tooltip></Button>
-                              <Button mnemonicParsing="false" onMouseClicked="#handleClose" style="-fx-background-color: orange; -fx-text-fill: white;" text="LIVE">
+                              <Button mnemonicParsing="false" onMouseClicked="#handleSend" style="-fx-background-color: orange; -fx-text-fill: white;" text="LIVE">
                                  <effect>
                                     <DropShadow blurType="TWO_PASS_BOX" color="#8d7b31" height="0.0" radius="7.8475" width="33.39" />
                                  </effect>
