@@ -25,7 +25,8 @@ public class OneController {
 	
 	//not using yet
 	@FXML
-	public ImageView refugees;
+	private ImageView refugees;
+	
 	private Ellipse ceiling;
 	
 //	private Stage sendStage;
@@ -53,9 +54,8 @@ public class OneController {
             sendStage.setTitle("Superheader");
             
             //clips
-//           
-//            Image image = new Image(
-//                    "file:images/refugees.jpg"
+           
+            refugees = new ImageView();
 //            );
 //    
 //            ColorAdjust colorAdjust = new ColorAdjust();
@@ -66,7 +66,7 @@ public class OneController {
 ////            ceiling_image.setEffect(colorAdjust);
 //            ceiling_image.setEffect(new GaussianBlur(5));
 //            refugees.setClip(ceiling);
-//            refugees.setEffect(new GaussianBlur(5));
+            refugees.setEffect(new GaussianBlur(5));
             
             Scene scene = new Scene(page);
              sendStage.setScene(scene);
