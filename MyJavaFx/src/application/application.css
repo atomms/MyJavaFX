@@ -5,5 +5,19 @@
 }
 
 .mytitle{
-    -fx-font-family: "HipsterishFontNormal";
+    /*-fx-font-family: "HipsterishFontNormal";*/
+    -fx-font-family: "Shadows Into Light";
+}
+
+.avatar {
+    /* This image is 687 wide by 1024 tall, similar to your aspect ratio
+    background-image: "refugees.jpg";*/
+    
+  object-fit: cover;
+  border-radius:50%;
+  width: 150px;
+  height: 150px;
+  
+  
+  
 }
