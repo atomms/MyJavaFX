@@ -68,7 +68,7 @@ public class Main extends Application {
 
 			// Show the scene containing the root layout.
 			Scene scene = new Scene(rootLayout, 640, 480);
-			Image image = new Image("application/batman.png");  //pass in the image path
+			Image image = new Image("application/view/images/batman.png");  //pass in the image path
 			scene.setCursor(new ImageCursor(image));
 //			scene.setCursor(Cursor.CROSSHAIR); //Change cursor to crosshair
 			scene.getStylesheets().add(
