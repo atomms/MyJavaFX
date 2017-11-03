@@ -66,7 +66,7 @@ public class OneController {
 ////            ceiling_image.setEffect(colorAdjust);
 //            ceiling_image.setEffect(new GaussianBlur(5));
 //            refugees.setClip(ceiling);
-            refugees.setEffect(new GaussianBlur(5));
+            refugees.setEffect(new GaussianBlur(50));
             
             Scene scene = new Scene(page);
              sendStage.setScene(scene);

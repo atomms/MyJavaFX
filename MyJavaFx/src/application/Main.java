@@ -1,15 +1,17 @@
 package application;
 	
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.io.IOException;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.stage.Stage;
-import javafx.scene.Cursor;
 import javafx.scene.ImageCursor;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
+import javafx.stage.Stage;
 
 /**
  * 
@@ -27,6 +29,7 @@ public class Main extends Application {
 	 */
 	public Stage primaryStage;
 
+
 	
 	/**
 	 * sets the stage
@@ -35,11 +38,14 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			
+			Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 			this.primaryStage = primaryStage;
 			this.primaryStage.setTitle("AID School");
-			this.primaryStage.setX(200);
-			this.primaryStage.setY(200);
-            Thread.sleep(0);
+//			this.primaryStage.setX(200);
+//			this.primaryStage.setY(200);
+			this.primaryStage.setX(screenSize.getWidth()/7);   
+			this.primaryStage.setY(screenSize.getHeight()/7);
+
 			primaryStage.show();
 			
 			initRootLayout();
