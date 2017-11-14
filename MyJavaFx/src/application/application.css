@@ -5,8 +5,12 @@
 }
 
 .mytitle{
-    /*-fx-font-family: "HipsterishFontNormal";*/
-    -fx-font-family: "Shadows Into Light";
+    -fx-font-family: "HipsterishFontNormal";
+    /*-fx-font-family: "Shadows Into Light";*/
     -fx-font-size: 36px;
     
 }
+
+.mypane{
+	-fx-background-color: linear-gradient(#2A5058, #61a2b1); }
+

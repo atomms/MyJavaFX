@@ -20,11 +20,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OneController">
+<AnchorPane minHeight="300.0" minWidth="500.0" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OneController">
    <children>
-      <BorderPane prefHeight="400.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
-            <GridPane BorderPane.alignment="CENTER">
+            <GridPane styleClass="mypane" stylesheets="@../application.css" BorderPane.alignment="CENTER">
               <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -41,12 +41,12 @@
                         <Image url="@images/CChannel.png" />
                      </image>
                      <effect>
-                        <ColorAdjust />
+                        <ColorAdjust brightness="0.2" />
                      </effect>
                   </ImageView>
                   <VBox alignment="CENTER" GridPane.columnIndex="1">
                      <children>
-                        <Label alignment="CENTER" styleClass="mytitle" stylesheets="@../application.css" text="School of AID">
+                        <Label alignment="CENTER" styleClass="mytitle" stylesheets="@../application.css" text="School of AID" textFill="#f2e9e9">
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin>
@@ -54,7 +54,7 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" style="-fx-underline: true; -fx-font-style: italic;" text="need help?" GridPane.rowIndex="1">
+                        <Label alignment="CENTER" style="-fx-underline: true; -fx-font-style: italic;" text="need help?" textFill="#e1c9c9" GridPane.rowIndex="1">
                            <VBox.margin>
                               <Insets top="5.0" />
                            </VBox.margin>
@@ -76,7 +76,7 @@
                               <ContextMenu>
                                 <items>
                                   <MenuItem mnemonicParsing="false" onAction="#handleClose" text="option one" />
-                                    <MenuItem mnemonicParsing="false" onAction="#handleClose" text="option one too" />
+                                    <MenuItem mnemonicParsing="false" onAction="#handleClose" text="three" />
                                 </items>
                               </ContextMenu>
                            </contextMenu></Label>

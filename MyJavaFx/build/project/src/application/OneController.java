@@ -1,16 +1,11 @@
 package application;
 
 import java.io.IOException;
-import java.util.ResourceBundle;
-
-import javax.print.DocFlavor.URL;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.effect.ColorAdjust;
 import javafx.scene.effect.GaussianBlur;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Ellipse;
@@ -23,13 +18,11 @@ import javafx.stage.Stage;
  */
 public class OneController {
 	
-	//not using yet
-	@FXML
-	private ImageView refugees;
+
 	
 	private Ellipse ceiling;
 	
-//	private Stage sendStage;
+	public Stage sendStage;
 
     
     private void initializeCeiling(AnchorPane root) {
@@ -51,12 +44,12 @@ public class OneController {
             loader.setLocation(Main.class.getResource("view/Superheader.fxml"));
             AnchorPane page = (AnchorPane) loader.load();
             Stage sendStage = new Stage();
+            loader.setController(new SetBlur());
             sendStage.setTitle("Superheader");
             
-            //clips
-           
-            refugees = new ImageView();
-//            );
+            //clips     	
+          
+            //            );
 //    
 //            ColorAdjust colorAdjust = new ColorAdjust();
 //            colorAdjust.setContrast(1);
@@ -66,18 +59,40 @@ public class OneController {
 ////            ceiling_image.setEffect(colorAdjust);
 //            ceiling_image.setEffect(new GaussianBlur(5));
 //            refugees.setClip(ceiling);
-            refugees.setEffect(new GaussianBlur(5));
+//            refugees.setEffect(new GaussianBlur(50));
             
             Scene scene = new Scene(page);
              sendStage.setScene(scene);
+             sendStage.show();
 
             
-            sendStage.show();
+
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+    
+    
+    
+    /**
+     * la clase controladora que añade un efecto a la imagen
+     */
+    class SetBlur {
+    	
+    	@FXML
+        private ImageView refugees;       
+
+/**
+ * la etiqueta FXML permite acceder al componente imageView ya creado en fxml
+ */
+    	@FXML
+        public void initialize() {           
+                 refugees.setEffect(new GaussianBlur(50));
+                 
+        }
+    }
+    	
     /**
      * Method to handle the ImageView action in the Main stage 
      */

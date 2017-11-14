@@ -41,8 +41,8 @@ public class Main extends Application {
 			Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 			this.primaryStage = primaryStage;
 			this.primaryStage.setTitle("AID School");
-//			this.primaryStage.setX(200);
-//			this.primaryStage.setY(200);
+//			this.primaryStage.setX(500);
+//			this.primaryStage.setY(500);
 			this.primaryStage.setX(screenSize.getWidth()/7);   
 			this.primaryStage.setY(screenSize.getHeight()/7);
 
@@ -67,7 +67,7 @@ public class Main extends Application {
 			rootLayout = (AnchorPane) loader.load();
 
 			// Show the scene containing the root layout.
-			Scene scene = new Scene(rootLayout, 640, 480);
+			Scene scene = new Scene(rootLayout, 700,600);
 			Image image = new Image("application/view/images/batman.png");  //pass in the image path
 			scene.setCursor(new ImageCursor(image));
 //			scene.setCursor(Cursor.CROSSHAIR); //Change cursor to crosshair
@@ -77,6 +77,10 @@ public class Main extends Application {
 			//			adding fonts
 			scene.getStylesheets().add("http://fonts.googleapis.com/css?family=Shadows+Into+Light");
             Font.loadFont(getClass().getResourceAsStream("../resources/fonts/HipsterishFontNormal.ttf"), 20);
+            
+            primaryStage.setMinWidth(600);
+            primaryStage.setMinHeight(400);
+//            primaryStage.sizeToScene();
             
 			primaryStage.setScene(scene);
 			
