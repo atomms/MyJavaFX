@@ -34,7 +34,7 @@ public class OneController {
 		refugees.fitWidthProperty().bind(scene.widthProperty());
 		refugees.setPreserveRatio(true);
 		sendStage.setScene(scene);
-		sendStage.show();
+
 	}
 
 	// private void initializeCeiling(AnchorPane root) {
@@ -58,6 +58,8 @@ public class OneController {
 			Stage sendStage = new Stage();
 			loader.setController(new SetBlur());
 			sendStage.setTitle("Superheader");
+			sendStage.show();
+
 
 			// clips
 
@@ -92,6 +94,7 @@ public class OneController {
 		 * la etiqueta FXML permite acceder al componente imageView ya creado en
 		 * fxml
 		 */
+		
 		@FXML
 		public void initialize() {
 			refugees.setEffect(new GaussianBlur(50));

@@ -15,10 +15,9 @@ import javafx.stage.Stage;
 
 /**
  * 
- * A <b>JavaFX</b> interface with a nice look and simple functionality 
  * @author ernesto
- * @version 1.0
- * @see OneController
+ * @version 1.0.0
+ * @see Controller
  */
 
 public class Main extends Application {
@@ -46,9 +45,10 @@ public class Main extends Application {
 			this.primaryStage.setX(screenSize.getWidth()/7);   
 			this.primaryStage.setY(screenSize.getHeight()/7);
 
+			initRootLayout();
 			primaryStage.show();
 			
-			initRootLayout();
+
 			
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -78,9 +78,9 @@ public class Main extends Application {
 			scene.getStylesheets().add("http://fonts.googleapis.com/css?family=Shadows+Into+Light");
             Font.loadFont(getClass().getResourceAsStream("../resources/fonts/HipsterishFontNormal.ttf"), 20);
             
-            primaryStage.setMinWidth(600);
-            primaryStage.setMinHeight(400);
-//            primaryStage.sizeToScene();
+            primaryStage.setWidth(700);
+            primaryStage.setHeight(600);
+//          primaryStage.sizeToScene();
             
 			primaryStage.setScene(scene);
 			

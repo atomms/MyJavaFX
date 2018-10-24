@@ -5,9 +5,9 @@
 }
 
 .mytitle{
-    -fx-font-family: "HipsterishFontNormal";
-    /*-fx-font-family: "Shadows Into Light";*/
-    -fx-font-size: 36px;
+    /*-fx-font-family: "HipsterishFontNormal";*/
+    -fx-font-family: "Shadows Into Light";
+    -fx-font-size: 36.0px;
     
 }
 
