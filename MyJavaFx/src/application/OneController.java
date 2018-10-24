@@ -51,15 +51,17 @@ public class OneController {
 
 	public void showSendProfile() {
 		try {
-			// Load the fxml file and create a new stage for the popup.
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("view/Superheader.fxml"));
-			page = (AnchorPane) loader.load();
-			Stage sendStage = new Stage();
-			loader.setController(new SetBlur());
-			sendStage.setTitle("Superheader");
-			sendStage.show();
 
+            // Load the fxml file and create a new stage for the popup.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("view/Superheader.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            Stage sendStage = new Stage();
+            sendStage.setTitle("Send Profile");
+            Scene scene = new Scene(page);
+            sendStage.setScene(scene);
+            
+            sendStage.show();
 
 			// clips
 
