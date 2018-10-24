@@ -27,15 +27,15 @@ public class OneController {
 
 	public Stage sendStage;
 
-	private void initialize() {
-		Scene scene = new Scene(page);
-		// refugees.setEffect(new GaussianBlur(50));
-		// refugees.fitWidthProperty().bind(sendStage.widthProperty());
-		refugees.fitWidthProperty().bind(scene.widthProperty());
-		refugees.setPreserveRatio(true);
-		sendStage.setScene(scene);
-
-	}
+//	private void initialize() {
+//		Scene scene = new Scene(page);
+//		// refugees.setEffect(new GaussianBlur(50));
+//		// refugees.fitWidthProperty().bind(sendStage.widthProperty());
+//		refugees.fitWidthProperty().bind(scene.widthProperty());
+//		refugees.setPreserveRatio(true);
+//		sendStage.setScene(scene);
+//
+//	}
 
 	// private void initializeCeiling(AnchorPane root) {
 	// ceiling = new Ellipse();
