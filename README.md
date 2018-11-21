@@ -1,2 +1,2 @@
 # MyJavaFX
-![](https://github.com/atomms/MyJavaFX/1.png)
+![](https://github.com/atomms/MyJavaFX/blob/master/1.png)
