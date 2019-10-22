@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="application.OneController">
    <children>
-      <ImageView fx:id="refugees" onDragExited="#windowClose" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="refugees" onDragDetected="#windowClose" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/refugees.jpg" />
          </image></ImageView>
