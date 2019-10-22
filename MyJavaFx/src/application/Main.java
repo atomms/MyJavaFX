@@ -10,7 +10,6 @@ import javafx.scene.ImageCursor;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 /**
@@ -62,27 +61,26 @@ public class Main extends Application {
 	public void initRootLayout() {
 		try {
 			// Load root layout from fxml file.
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Main.class.getResource("view/Layouts.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("view/Layouts.fxml"));
 			rootLayout = (AnchorPane) loader.load();
-
 			// Show the scene containing the root layout.
-			Scene scene = new Scene(rootLayout, 700,600);
+//            rootLayout.setMinSize(200, 200);
+            Scene scene = new Scene(rootLayout);
 			Image image = new Image("application/view/images/batman.png");  //pass in the image path
 			scene.setCursor(new ImageCursor(image));
 //			scene.setCursor(Cursor.CROSSHAIR); //Change cursor to crosshair
-			scene.getStylesheets().add(
-					getClass().getResource("application.css").toExternalForm());
 	
 			//			adding fonts
 			scene.getStylesheets().add("http://fonts.googleapis.com/css?family=Shadows+Into+Light");
-            Font.loadFont(getClass().getResourceAsStream("../resources/fonts/HipsterishFontNormal.ttf"), 20);
+//            Font.loadFont(getClass().getResourceAsStream("../resources/fonts/HipsterishFontNormal.ttf"), 20);
             
-            primaryStage.setWidth(700);
-            primaryStage.setHeight(600);
+//            primaryStage.setWidth(700);
+//            primaryStage.setHeight(600);
 //          primaryStage.sizeToScene();
             
-			primaryStage.setScene(scene);
+
+            primaryStage.setScene(scene);
+			
 			
 
 		} catch (IOException e) {

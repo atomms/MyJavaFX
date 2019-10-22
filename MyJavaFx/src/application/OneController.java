@@ -16,16 +16,14 @@ import javafx.stage.Stage;
  * 
  * @author ernesto
  */
+
 public class OneController {
 
 	@FXML
 	public ImageView refugees;
-
 	private Ellipse ceiling;
 	public AnchorPane page;
 	public Scene scene;
-
-	public Stage sendStage;
 
 //	private void initialize() {
 //		Scene scene = new Scene(page);
@@ -53,17 +51,27 @@ public class OneController {
 		try {
 
             // Load the fxml file and create a new stage for the popup.
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("view/Superheader.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("view/Superheader.fxml"));
             AnchorPane page = (AnchorPane) loader.load();
-            Stage sendStage = new Stage();
+            Stage sendStage = new Stage();    
             sendStage.setTitle("Send Profile");
             Scene scene = new Scene(page);
-            sendStage.setScene(scene);
-            
+            sendStage.setScene(scene);          
             sendStage.show();
 
-			// clips
+//			 clips
+
+			// );
+			//
+			// ColorAdjust colorAdjust = new ColorAdjust();
+			// colorAdjust.setContrast(1);
+			// colorAdjust.setHue(0);
+			// colorAdjust.setBrightness(0);
+			// colorAdjust.setSaturation(0);
+			// // ceiling_image.setEffect(colorAdjust);
+			// ceiling_image.setEffect(new GaussianBlur(5));
+			// refugees.setClip(ceiling);
+
 
 			// );
 			//
@@ -111,7 +119,6 @@ public class OneController {
 	@FXML
 	private void handleSend() {
 		showSendProfile();
-		// sendStage.close();
 	}
 
 	/**
@@ -119,7 +126,15 @@ public class OneController {
 	 */
 	@FXML
 	private void handleClose() {
-
 		System.exit(0);
 	}
+	
+	@FXML
+	private void windowClose() {
+		Stage thisStage = (Stage) refugees.getScene().getWindow();
+	    thisStage.close();	
+	}
+	
+    
+    
 }

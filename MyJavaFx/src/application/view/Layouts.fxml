@@ -20,7 +20,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane minHeight="300.0" minWidth="500.0" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OneController">
+<AnchorPane minHeight="300.0" minWidth="500.0" prefHeight="480.0" prefWidth="640.0" styleClass="mypane" stylesheets="@../application.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="application.OneController">
    <children>
       <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
@@ -41,7 +41,7 @@
                         <Image url="@images/CChannel.png" />
                      </image>
                      <effect>
-                        <ColorAdjust brightness="0.2" />
+                        <ColorAdjust brightness="0.59" contrast="0.09" hue="-0.68" saturation="-0.15" />
                      </effect>
                   </ImageView>
                   <VBox alignment="CENTER" GridPane.columnIndex="1">
@@ -87,7 +87,7 @@
                   </VBox>
                   <AnchorPane GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <children>
-                        <HBox alignment="BOTTOM_RIGHT" prefHeight="138.0" prefWidth="213.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="138.0" prefWidth="213.0" spacing="10.0" stylesheets="@../application.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                            <children>
                               <Button mnemonicParsing="false" onAction="#handleClose" styleClass="mybutton" stylesheets="@../application.css" text="DIE">
                                  <cursor>
