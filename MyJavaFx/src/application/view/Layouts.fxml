@@ -99,7 +99,7 @@
                                  <tooltip>
                                     <Tooltip text="click me!" />
                                  </tooltip></Button>
-                              <Button mnemonicParsing="false" onAction="#showSendProfile" onMouseClicked="#handleSend" style="-fx-background-color: orange; -fx-text-fill: white;" text="LIVE">
+                              <Button mnemonicParsing="false" onAction="#showSendProfile" style="-fx-background-color: orange; -fx-text-fill: white;" text="LIVE">
                                  <effect>
                                     <DropShadow blurType="TWO_PASS_BOX" color="#8d7b31" height="0.0" radius="7.8475" width="33.39" />
                                  </effect>
